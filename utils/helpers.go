@@ -31,21 +31,16 @@ func CheckUsers() {
 	}
 
 	// Log the JSON file content
-	fmt.Println("JSON File Content:")
 	fmt.Println(string(data))
 
-	// Define a variable to hold the parsed data
-	var personData Person
+	// Define a variable to hold the parsed data as a slice of Person
+	var peopleData []Person
 
-	// Unmarshal the JSON data into the Go struct
-	err = json.Unmarshal(data, &personData)
+	// Unmarshal the JSON data into the slice of Person
+	err = json.Unmarshal(data, &peopleData)
 	if err != nil {
 		fmt.Println("Error unmarshalling JSON:", err)
 		return
 	}
 
-	// Access the data in the Go struct
-	fmt.Println("Name:", personData.Name)
-	fmt.Println("Age:", personData.Age)
-	fmt.Println("Email:", personData.Email)
 }

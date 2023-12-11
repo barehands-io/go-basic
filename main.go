@@ -6,8 +6,8 @@ import (
 
 func main() {
 
-	//utils.CheckUsers()
+	utils.CheckUsers()
 
-	utils.ReadXlsx()
+	//utils.ReadXlsx()
 
 }

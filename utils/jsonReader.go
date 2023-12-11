@@ -3,7 +3,6 @@ package utils
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 )
 
@@ -15,18 +14,10 @@ type Person struct {
 }
 
 func CheckUsers() {
-	// Open and read the JSON file
-	file, err := os.Open("./uploads/users.json")
+	// Read the JSON file
+	data, err := os.ReadFile("./uploads/users.json")
 	if err != nil {
 		fmt.Println(err)
-		return
-	}
-	defer file.Close()
-
-	// Read the file contents
-	data, err := ioutil.ReadAll(file)
-	if err != nil {
-		fmt.Println("Error reading file:", err)
 		return
 	}
 

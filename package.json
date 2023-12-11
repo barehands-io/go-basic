@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "air || ~/go/bin/air",
+    "env:dev": "npx jsonbank-env dev .env",
+    "env:prod": "npx jsonbank-env prod .env"
+  },
+  "dependencies": {
+    "jsonbank-env": "^1.0.2"
+  }
+}
